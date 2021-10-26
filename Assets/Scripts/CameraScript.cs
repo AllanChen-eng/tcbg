@@ -29,7 +29,7 @@ public class CameraScript : MonoBehaviour
     public float maxPitch = 90.0f;
 
     [Header("Zoom")]
-    public float distance = 5.0f;
+    public float distance = 10.0f;
     public float zoomSpeed = 5.0f;
     public float minZoom = 1.0f;
     public float maxZoom = 1000.0f;

@@ -171,7 +171,7 @@ MonoBehaviour:
   minPitch: 20
   maxPitch: 90
   distance: 3
-  zoomSpeed: 50
+  zoomSpeed: 5
   minZoom: 1
   maxZoom: 1000
 --- !u!20 &519420031
