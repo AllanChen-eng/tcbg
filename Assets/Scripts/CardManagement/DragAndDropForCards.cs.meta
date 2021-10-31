@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ba060a3107f67462383fa72283547c43
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - card1: {fileID: 929677444590276424, guid: aafbb66506578401ab70828b67e1040f, type: 3}
+  - scriptGraveyard: {fileID: 1214628073135579976, guid: 02ee9a182bb9a4aefa92b2868b22309a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
