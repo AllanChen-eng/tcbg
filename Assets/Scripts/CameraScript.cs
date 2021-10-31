@@ -7,7 +7,6 @@ public class CameraScript : MonoBehaviour
     private static int RIGHT_MOUSE_BUTTON = 1;
     private static int CameraMoveButton = RIGHT_MOUSE_BUTTON;
 
-    // private Vector3 mousePosition = new Vector3(0,0,0);
     private Vector3 currentRotation;
     private Vector3 smoothVelocity = Vector3.zero;
     private float smoothTime = 0.2f;
@@ -39,6 +38,7 @@ public class CameraScript : MonoBehaviour
     }
 
     private void MoveCamera() {
+        // Move the camera around the center of the gameboard when the right mouse is held
         if (Input.GetMouseButton(CameraMoveButton)) {
             float mouseX = Input.GetAxis("Mouse X") * xSensitivity;
             float mouseY = Input.GetAxis("Mouse Y") * ySensitivity;
@@ -54,9 +54,9 @@ public class CameraScript : MonoBehaviour
         Vector3 nextRotation = new Vector3(xAngle, yAngle);
         currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
         transform.localEulerAngles = currentRotation;
-
-        // Something similar to this can be used for zoom in and out
-        distance += Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+        
+        // Zoom
+        distance -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
         distance = Mathf.Clamp(distance, minZoom, maxZoom);
 
         transform.position = target.position - transform.forward * distance;
