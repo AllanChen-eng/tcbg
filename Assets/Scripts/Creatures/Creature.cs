@@ -37,6 +37,10 @@ public class Creature
         this.targetPosition = target;
     }
 
+    public bool IsMoving() {
+        return currentPosition != targetPosition;
+    }
+
     public void UpdatePosition() {
         if (currentPosition == targetPosition) return;
 

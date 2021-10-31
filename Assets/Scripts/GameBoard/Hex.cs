@@ -15,6 +15,10 @@ public class Hex
 
     private int boardSize = 0;
 
+    #nullable enable
+    private Creature? creature;
+    #nullable disable
+
     public Hex(int q, int r, int boardSize) {
         this.Q = q;
         this.R = r;
@@ -40,6 +44,22 @@ public class Hex
 
     public float HexHorizontalSpacing() {
         return HexWidth();
+    }
+
+    public bool IsOccupied() {
+        return creature != null;
+    }
+
+    public void SetCreature(Creature creature) {
+        this.creature = creature;
+    }
+
+    public void RemoveCreature() {
+        this.creature = null;
+    }
+
+    public Creature GetCreature() {
+        return this.creature;
     }
 
     public Vector3 Position() {

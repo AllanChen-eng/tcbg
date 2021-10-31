@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdf9e5069547ea4eb233e36e9d17f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GruntPrefab: {fileID: 1984073913437563913, guid: 7e83ee1eb17527a47be9719bca1b35e1, type: 3}
 --- !u!1 &2028369334
 GameObject:
   m_ObjectHideFlags: 0

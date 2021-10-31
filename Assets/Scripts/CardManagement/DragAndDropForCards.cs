@@ -51,7 +51,15 @@ public class DragAndDropForCards : MonoBehaviour
         {
             // what happens when the card is played
             Destroy(this);
-            Debug.Log("trigger to decide what happens!");
+            // Debug.Log("trigger to decide what happens!");
+            GameBoard gb = GameObject.Find("GameBoard").GetComponent<GameBoard>();
+            CreatureManager cm = GameObject.Find("GameBoard").GetComponentInChildren<CreatureManager>();
+
+            // This should be a drag and drop location of where the card will be spawned on the gameboard
+            // There should be some animation of the creature that will be spawned, like you're dragging the
+            // creature to that spot - rather than the card.
+            Hex hex = gb.GetHexAt(Random.Range(5, 25), Random.Range(5, 25));
+            cm.SpawnCreature(CreatureType.GRUNT, hex);
         }
         else
         {

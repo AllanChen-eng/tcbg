@@ -29,7 +29,7 @@ public class CardZoom : MonoBehaviour
     public void OnHoverEnter()
     {
         zoomCard = Instantiate(gameObject, new Vector2(positionX/2,positionY+sizeCompensation), Quaternion.identity);
-        Debug.Log(positionY);
+        // Debug.Log(positionY);
         zoomCard.transform.SetParent(canvas.transform, false);
 
         RectTransform rect = zoomCard.GetComponent<RectTransform>();
